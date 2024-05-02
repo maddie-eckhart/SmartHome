@@ -1,3 +1,12 @@
+### Description
+#### HomeKit and Home Accessories
+- Finds the primary Home on an apple device using HomeKit
+- Displays the Accessories -> Services -> Characteristics
+- Explores the hierarchy of a smart device
+#### CoreBluetooth and BLEs
+- Finds all available BLEs using CoreBluetooth
+- Displays the name of the peripheral in a list
+- Explores central managers, peripherals, and bluetooth
 
 ### References
 - SwiftUI & HomeKit: https://www.createwithswift.com/creating-a-homekit-enabled-app-with-swiftui/
