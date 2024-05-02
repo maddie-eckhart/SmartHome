@@ -11,6 +11,10 @@
 		C10B1FA22BDEF8F800C0B14C /* AccessoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B1FA12BDEF8F800C0B14C /* AccessoriesView.swift */; };
 		C10B1FA42BDEFBE200C0B14C /* ServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B1FA32BDEFBE200C0B14C /* ServicesView.swift */; };
 		C10B1FA62BDEFD4700C0B14C /* CharacteristicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B1FA52BDEFD4700C0B14C /* CharacteristicsView.swift */; };
+		C15E5D422BE2AEFD00A961CF /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E5D412BE2AEFD00A961CF /* BluetoothManager.swift */; };
+		C15E5D442BE2C72F00A961CF /* ListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E5D432BE2C72F00A961CF /* ListButton.swift */; };
+		C15E5D462BE2D0A000A961CF /* SmartHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E5D452BE2D0A000A961CF /* SmartHomeView.swift */; };
+		C15E5D482BE2D25600A961CF /* BluetoothView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15E5D472BE2D25600A961CF /* BluetoothView.swift */; };
 		C182C2E32BDB1B3500D9C2F2 /* SmartHomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C182C2E22BDB1B3500D9C2F2 /* SmartHomeApp.swift */; };
 		C182C2E52BDB1B3500D9C2F2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C182C2E42BDB1B3500D9C2F2 /* HomeView.swift */; };
 		C182C2E72BDB1B3600D9C2F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C182C2E62BDB1B3600D9C2F2 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 		C10B1FA12BDEF8F800C0B14C /* AccessoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoriesView.swift; sourceTree = "<group>"; };
 		C10B1FA32BDEFBE200C0B14C /* ServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesView.swift; sourceTree = "<group>"; };
 		C10B1FA52BDEFD4700C0B14C /* CharacteristicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsView.swift; sourceTree = "<group>"; };
+		C15E5D412BE2AEFD00A961CF /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		C15E5D432BE2C72F00A961CF /* ListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButton.swift; sourceTree = "<group>"; };
+		C15E5D452BE2D0A000A961CF /* SmartHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeView.swift; sourceTree = "<group>"; };
+		C15E5D472BE2D25600A961CF /* BluetoothView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothView.swift; sourceTree = "<group>"; };
 		C182C2DF2BDB1B3500D9C2F2 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C182C2E22BDB1B3500D9C2F2 /* SmartHomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeApp.swift; sourceTree = "<group>"; };
 		C182C2E42BDB1B3500D9C2F2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -81,6 +89,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C15E5D3E2BE2AEA500A961CF /* HomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				C182C2E42BDB1B3500D9C2F2 /* HomeView.swift */,
+				C10B1FA12BDEF8F800C0B14C /* AccessoriesView.swift */,
+				C10B1FA32BDEFBE200C0B14C /* ServicesView.swift */,
+				C10B1FA52BDEFD4700C0B14C /* CharacteristicsView.swift */,
+				C15E5D432BE2C72F00A961CF /* ListButton.swift */,
+			);
+			path = HomeKit;
+			sourceTree = "<group>";
+		};
+		C15E5D3F2BE2AED700A961CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C182C2E22BDB1B3500D9C2F2 /* SmartHomeApp.swift */,
+				C10B1F9F2BDD899B00C0B14C /* SmartHomeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C15E5D402BE2AEE400A961CF /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				C15E5D412BE2AEFD00A961CF /* BluetoothManager.swift */,
+				C15E5D472BE2D25600A961CF /* BluetoothView.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
 		C182C2D62BDB1B3500D9C2F2 = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +142,12 @@
 		C182C2E12BDB1B3500D9C2F2 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
-				C10B1F9E2BDD87D200C0B14C /* Info.plist */,
+				C15E5D452BE2D0A000A961CF /* SmartHomeView.swift */,
+				C15E5D3F2BE2AED700A961CF /* Models */,
+				C15E5D3E2BE2AEA500A961CF /* HomeKit */,
+				C15E5D402BE2AEE400A961CF /* BLE */,
 				C10B1F9D2BDD872E00C0B14C /* SmartHome.entitlements */,
-				C182C2E22BDB1B3500D9C2F2 /* SmartHomeApp.swift */,
-				C10B1F9F2BDD899B00C0B14C /* SmartHomeModel.swift */,
-				C10B1FA32BDEFBE200C0B14C /* ServicesView.swift */,
-				C182C2E42BDB1B3500D9C2F2 /* HomeView.swift */,
-				C10B1FA12BDEF8F800C0B14C /* AccessoriesView.swift */,
-				C10B1FA52BDEFD4700C0B14C /* CharacteristicsView.swift */,
+				C10B1F9E2BDD87D200C0B14C /* Info.plist */,
 				C182C2E62BDB1B3600D9C2F2 /* Assets.xcassets */,
 				C182C2E82BDB1B3600D9C2F2 /* Preview Content */,
 			);
@@ -274,8 +310,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C10B1FA42BDEFBE200C0B14C /* ServicesView.swift in Sources */,
+				C15E5D482BE2D25600A961CF /* BluetoothView.swift in Sources */,
 				C10B1FA62BDEFD4700C0B14C /* CharacteristicsView.swift in Sources */,
 				C182C2E52BDB1B3500D9C2F2 /* HomeView.swift in Sources */,
+				C15E5D462BE2D0A000A961CF /* SmartHomeView.swift in Sources */,
+				C15E5D442BE2C72F00A961CF /* ListButton.swift in Sources */,
+				C15E5D422BE2AEFD00A961CF /* BluetoothManager.swift in Sources */,
 				C10B1FA02BDD899B00C0B14C /* SmartHomeModel.swift in Sources */,
 				C182C2E32BDB1B3500D9C2F2 /* SmartHomeApp.swift in Sources */,
 				C10B1FA22BDEF8F800C0B14C /* AccessoriesView.swift in Sources */,
@@ -448,6 +488,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartHome/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses bluetooth to find, connect, and transfer data to BLE solenoid device";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Looking for BLEs";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configuring smart home accessories";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -482,6 +524,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartHome/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses bluetooth to find, connect, and transfer data to BLE solenoid device";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Looking for BLEs";
 				INFOPLIST_KEY_NSHomeKitUsageDescription = "Configuring smart home accessories";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -7,10 +7,9 @@
 
 import Foundation
 import HomeKit
-import Combine
 
 class SmartHomeModel: NSObject, ObservableObject, HMHomeManagerDelegate {
-    
+  
     @Published var homes: [HMHome] = []
     @Published var accessories: [HMAccessory] = []
     @Published var services: [HMService] = []
@@ -28,7 +27,7 @@ class SmartHomeModel: NSObject, ObservableObject, HMHomeManagerDelegate {
         }
     }
 
-    func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
+    @objc func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
         print("🥚: updated homes")
         if let homes = self.manager?.homes {
             self.homes = homes
