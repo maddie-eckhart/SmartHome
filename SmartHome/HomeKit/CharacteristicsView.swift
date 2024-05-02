@@ -16,26 +16,28 @@ struct CharacteristicsView: View {
     var homeId: UUID
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("\(model.services.first(where: {$0.uniqueIdentifier == serviceId})?.name ?? "No Service Name Found") Characteristics")
-                .font(.title2)
-                .padding(.bottom, 24)
-            ForEach(model.characteristics, id: \.uniqueIdentifier) { characteristic in
+        ScrollView(showsIndicators: false) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("\(model.services.first(where: {$0.uniqueIdentifier == serviceId})?.name ?? "No Service Name Found") Characteristics")
+                    .font(.title2)
+                    .padding(.bottom, 24)
+                ForEach(model.characteristics, id: \.uniqueIdentifier) { characteristic in
+                    
+                    NavigationLink(
+                        destination:
+                            Text(characteristic.metadata?.description ?? "No metadata found").padding(.horizontal, 24),
+                        label: {
+                            ListButton(
+                                name: characteristic.localizedDescription,
+                                backgroundColor: .teal
+                            )
+                        }
+                    )
+                    .buttonStyle(PlainButtonStyle())
+                }
                 
-                NavigationLink(
-                    destination:
-                        Text(characteristic.metadata?.description ?? "No metadata found").padding(.horizontal, 24),
-                    label: {
-                        ListButton(
-                            name: characteristic.localizedDescription,
-                            backgroundColor: .teal
-                        )
-                    }
-                )
-                .buttonStyle(PlainButtonStyle())
+                Spacer()
             }
-            
-            Spacer()
         }
         .padding(.horizontal, 24)
         .onAppear() {

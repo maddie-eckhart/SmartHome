@@ -30,7 +30,9 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if !discoveredPeripherals.contains(peripheral) {
-            discoveredPeripherals.append(peripheral)
+                peripheral.name == nil ? 
+                    discoveredPeripherals.append(peripheral) :
+                    discoveredPeripherals.insert(peripheral, at: 0)
         }
     }
 

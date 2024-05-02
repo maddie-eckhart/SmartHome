@@ -13,13 +13,6 @@ struct BluetoothView: View {
 
     var body: some View {
         VStack {
-            Button(action: {
-                bluetoothManager.toggleBluetooth()
-            }) {
-                Text(bluetoothManager.isBluetoothEnabled ? "Turn Off Bluetooth" : "Turn On Bluetooth")
-                    .padding()
-            }
-            
             Text("Bluetooth is \(bluetoothManager.isBluetoothEnabled ? "enabled" : "disabled")")
                 .padding()
             
