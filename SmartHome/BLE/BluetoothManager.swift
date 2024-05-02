@@ -35,13 +35,4 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, ObservableObject {
                     discoveredPeripherals.insert(peripheral, at: 0)
         }
     }
-
-    func toggleBluetooth() {
-        if centralManager.state == .poweredOn {
-            centralManager.stopScan()
-            centralManager = nil
-        } else {
-            centralManager = CBCentralManager(delegate: self, queue: nil)
-        }
-    }
 }

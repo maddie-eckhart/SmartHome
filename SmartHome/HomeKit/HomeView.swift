@@ -10,8 +10,6 @@ import HomeKit
 
 struct HomeView: View {
     @ObservedObject var model: SmartHomeModel
-
-    @StateObject var bluetoothManager = BluetoothManager()
     @State var path = NavigationPath()
     
     var body: some View {
